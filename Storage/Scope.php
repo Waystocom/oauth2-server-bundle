@@ -1,9 +1,9 @@
 <?php
 
-namespace OAuth2\ServerBundle\Storage;
+namespace OAuth2ServerBundle\Storage;
 
 use OAuth2\Storage\ScopeInterface;
-use OAuth2\ServerBundle\Manager\ScopeManagerInterface;
+use OAuth2ServerBundle\Manager\ScopeManagerInterface;
 use Doctrine\ORM\EntityManager;
 
 /**

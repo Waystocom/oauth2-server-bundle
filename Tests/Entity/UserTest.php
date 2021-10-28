@@ -1,10 +1,10 @@
 <?php
 
-namespace OAuth2\ServerBundle\Tests\Entity;
+namespace OAuth2ServerBundle\Tests\Entity;
 
 use Exception;
-use OAuth2\ServerBundle\Tests\ContainerLoader;
-use OAuth2\ServerBundle\Entity\User;
+use OAuth2ServerBundle\Tests\ContainerLoader;
+use OAuth2ServerBundle\Entity\User;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -32,7 +32,7 @@ class UserTest extends TestCase
             $emn->persist($user);
             $emn->flush();
 
-            $stored = $emn->find('OAuth2\ServerBundle\Entity\User', array('username' => $name));
+            $stored = $emn->find('OAuth2ServerBundle\Entity\User', array('username' => $name));
 
             $this->assertNotNull($stored);
             $this->assertEquals($name, $stored->getUsername());

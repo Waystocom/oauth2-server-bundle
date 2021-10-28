@@ -1,12 +1,12 @@
 <?php
 
-namespace OAuth2\ServerBundle\Tests;
+namespace OAuth2ServerBundle\Tests;
 
 use OAuth2\Request;
 use OAuth2\Response;
 use OAuth2\Server;
-use OAuth2\ServerBundle\Manager\ClientManager;
-use OAuth2\ServerBundle\Manager\ScopeManager;
+use OAuth2ServerBundle\Manager\ClientManager;
+use OAuth2ServerBundle\Manager\ScopeManager;
 use PHPUnit\Framework\TestCase;
 
 class ContainerTest extends TestCase

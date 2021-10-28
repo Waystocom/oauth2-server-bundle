@@ -1,6 +1,6 @@
 <?php
 
-namespace OAuth2\ServerBundle\Controller;
+namespace OAuth2ServerBundle\Controller;
 
 use OAuth2\HttpFoundationBridge\Request;
 use OAuth2\HttpFoundationBridge\Response;

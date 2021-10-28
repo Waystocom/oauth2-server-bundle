@@ -1,15 +1,15 @@
 <?php
 
-namespace OAuth2\ServerBundle\Tests;
+namespace OAuth2ServerBundle\Tests;
 
 use Exception;
-use OAuth2\ServerBundle\Command\CreateClientCommand;
-use OAuth2\ServerBundle\Controller\AuthorizeController;
+use OAuth2ServerBundle\Command\CreateClientCommand;
+use OAuth2ServerBundle\Controller\AuthorizeController;
 use OAuth2\Server;
-use OAuth2\ServerBundle\Manager\ClientManager;
-use OAuth2\ServerBundle\Storage\AuthorizationCode;
-use OAuth2\ServerBundle\Storage\ClientCredentials;
-use OAuth2\ServerBundle\Storage\Scope;
+use OAuth2ServerBundle\Manager\ClientManager;
+use OAuth2ServerBundle\Storage\AuthorizationCode;
+use OAuth2ServerBundle\Storage\ClientCredentials;
+use OAuth2ServerBundle\Storage\Scope;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\Config\FileLocator;
@@ -43,7 +43,7 @@ class ContainerLoader
 <?xml version="1.0"?>
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <parameters>
-        <parameter key="oauth2.storage.authorization_code.class">OAuth2\ServerBundle\Storage\OpenID\AuthorizationCode</parameter>
+        <parameter key="oauth2.storage.authorization_code.class">OAuth2ServerBundle\Storage\OpenID\AuthorizationCode</parameter>
 
         <parameter key="oauth2.server.config" type="collection">
             <parameter key="use_openid_connect">true</parameter>
@@ -81,7 +81,7 @@ EOF;
 
         if ($container->hasDefinition(AuthorizationCode::class)) {
             $definition = $container->getDefinition(AuthorizationCode::class);
-            $definition->setClass(\OAuth2\ServerBundle\Storage\OpenID\AuthorizationCode::class);
+            $definition->setClass(\OAuth2ServerBundle\Storage\OpenID\AuthorizationCode::class);
         }
 
         $publicServices =  array(

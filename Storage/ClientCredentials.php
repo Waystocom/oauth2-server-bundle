@@ -1,6 +1,6 @@
 <?php
 
-namespace OAuth2\ServerBundle\Storage;
+namespace OAuth2ServerBundle\Storage;
 
 use OAuth2\Storage\ClientCredentialsInterface;
 use Doctrine\ORM\EntityManager;

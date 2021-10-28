@@ -1,6 +1,6 @@
 <?php
 
-namespace OAuth2\ServerBundle\User;
+namespace OAuth2ServerBundle\User;
 
 use Symfony\Component\Security\Core\User\UserInterface;
 

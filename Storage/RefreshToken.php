@@ -1,12 +1,12 @@
 <?php
 
-namespace OAuth2\ServerBundle\Storage;
+namespace OAuth2ServerBundle\Storage;
 
 use Doctrine\ORM\ORMException;
-use OAuth2\ServerBundle\Entity\Client;
+use OAuth2ServerBundle\Entity\Client;
 use OAuth2\Storage\RefreshTokenInterface;
 use Doctrine\ORM\EntityManager;
-use OAuth2\ServerBundle\Entity\RefreshToken as EntityRefreshToken;
+use OAuth2ServerBundle\Entity\RefreshToken as EntityRefreshToken;
 
 /**
  * Class RefreshToken

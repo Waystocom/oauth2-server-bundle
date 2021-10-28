@@ -1,9 +1,9 @@
 <?php
 
-namespace OAuth2\ServerBundle\Tests\Entity;
+namespace OAuth2ServerBundle\Tests\Entity;
 
-use OAuth2\ServerBundle\Tests\ContainerLoader;
-use OAuth2\ServerBundle\Entity\AuthorizationCode;
+use OAuth2ServerBundle\Tests\ContainerLoader;
+use OAuth2ServerBundle\Entity\AuthorizationCode;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -30,7 +30,7 @@ class AuthorizationCodeTest extends TestCase
             $emn->persist($authcode);
             $emn->flush();
 
-            $stored = $emn->find('OAuth2\ServerBundle\Entity\AuthorizationCode', array('code' => $code));
+            $stored = $emn->find('OAuth2ServerBundle\Entity\AuthorizationCode', array('code' => $code));
 
             $this->assertNotNull($stored);
             $this->assertEquals($code, $stored->getCode());

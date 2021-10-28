@@ -10,7 +10,7 @@
         <parameter key="doctrine.db.dbname">oauth2_server_bundle</parameter>
         <parameter key="doctrine.db.host">localhost</parameter>
         <parameter key="doctrine.config_paths" type="collection">
-            <parameter key="%kernel.project_dir%/Resources/config/doctrine">OAuth2\ServerBundle\Entity</parameter>
+            <parameter key="%kernel.project_dir%/Resources/config/doctrine">OAuth2ServerBundle\Entity</parameter>
         </parameter>
     </parameters>
     <services>
@@ -33,7 +33,7 @@
             </call>
             <call method="setEntityNamespaces">
                 <argument type="collection">
-                    <argument key="OAuth2ServerBundle">OAuth2\ServerBundle\Entity</argument>
+                    <argument key="OAuth2ServerBundle">OAuth2ServerBundle\Entity</argument>
                 </argument>
             </call>
         </service>

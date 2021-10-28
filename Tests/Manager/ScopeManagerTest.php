@@ -1,12 +1,12 @@
 <?php
 
-namespace OAuth2\ServerBundle\Tests\Entity;
+namespace OAuth2ServerBundle\Tests\Entity;
 
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\OptimisticLockException;
 use Doctrine\ORM\ORMException;
-use OAuth2\ServerBundle\Manager\ScopeManager;
-use OAuth2\ServerBundle\Tests\ContainerLoader;
+use OAuth2ServerBundle\Manager\ScopeManager;
+use OAuth2ServerBundle\Tests\ContainerLoader;
 use PHPUnit\Framework\TestCase;
 
 /**

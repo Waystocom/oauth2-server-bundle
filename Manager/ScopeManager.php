@@ -1,11 +1,11 @@
 <?php
 
-namespace OAuth2\ServerBundle\Manager;
+namespace OAuth2ServerBundle\Manager;
 
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\OptimisticLockException;
 use Doctrine\ORM\ORMException;
-use OAuth2\ServerBundle\Entity\Scope;
+use OAuth2ServerBundle\Entity\Scope;
 
 /**
  * Class ScopeManager
@@ -45,7 +45,7 @@ class ScopeManager implements ScopeManagerInterface
           return $scopeObject;
         }
 
-        $scopeObject = new \OAuth2\ServerBundle\Entity\Scope();
+        $scopeObject = new \OAuth2ServerBundle\Entity\Scope();
         $scopeObject->setScope($scope);
         $scopeObject->setDescription($description);
 

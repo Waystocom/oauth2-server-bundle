@@ -1,12 +1,12 @@
 <?php
 
-namespace OAuth2\ServerBundle\Controller;
+namespace OAuth2ServerBundle\Controller;
 
 use OAuth2\HttpFoundationBridge\Request;
 use OAuth2\HttpFoundationBridge\Response;
 use OAuth2\ResponseInterface;
 use OAuth2\Server;
-use OAuth2\ServerBundle\Storage\Scope;
+use OAuth2ServerBundle\Storage\Scope;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;

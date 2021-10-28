@@ -1,9 +1,9 @@
 <?php
 
-namespace OAuth2\ServerBundle\User;
+namespace OAuth2ServerBundle\User;
 
 use Doctrine\ORM\ORMException;
-use OAuth2\ServerBundle\Entity\User;
+use OAuth2ServerBundle\Entity\User;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 use Doctrine\ORM\EntityManager;

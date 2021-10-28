@@ -1,6 +1,6 @@
 <?php
 
-namespace OAuth2\ServerBundle\Entity;
+namespace OAuth2ServerBundle\Entity;
 
 /**
  * Class AccessToken

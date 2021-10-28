@@ -59,7 +59,7 @@ public function registerBundles()
 {
     $bundles = array(
         // ...
-        new OAuth2\ServerBundle\OAuth2ServerBundle(),
+        new OAuth2ServerBundle\OAuth2ServerBundle(),
     );
 }
 ```
@@ -129,7 +129,7 @@ parameters:
     oauth2.user_provider.class: Amce\OAuth2ServerBundle\User\OAuth2UserProvider
 ```
 
-If you want to take advantage of scope restriction on a per user basis your User entity will need to implement the `OAuth2\ServerBundle\OAuth2UserInterface` or `OAuth2\ServerBundle\AdvancedOAuth2UserInterface`.
+If you want to take advantage of scope restriction on a per user basis your User entity will need to implement the `OAuth2ServerBundle\OAuth2UserInterface` or `OAuth2ServerBundle\AdvancedOAuth2UserInterface`.
 
 Out of the box we do provide a basic user provider and entity for you to use. Setup your security.yml to use it:
 
@@ -138,7 +138,7 @@ Out of the box we do provide a basic user provider and entity for you to use. Se
 
 security:
     encoders:
-        OAuth2\ServerBundle\Entity\User:
+        OAuth2ServerBundle\Entity\User:
             algorithm:          sha512
             encode_as_base64:   true
             iterations:         5000

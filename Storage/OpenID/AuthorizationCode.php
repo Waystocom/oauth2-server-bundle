@@ -1,6 +1,6 @@
 <?php
 
-namespace OAuth2\ServerBundle\Storage\OpenID;
+namespace OAuth2ServerBundle\Storage\OpenID;
 
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\OptimisticLockException;
@@ -98,7 +98,7 @@ class AuthorizationCode implements AuthorizationCodeInterface
         if (!$client) throw new Exception('Unknown client identifier');
 
         if (!$authorizationCode = $this->getAuthorizationCode($code)) {
-          $authorizationCode = new \OAuth2\ServerBundle\Entity\AuthorizationCode();
+          $authorizationCode = new \OAuth2ServerBundle\Entity\AuthorizationCode();
         }
 
         $authorizationCode->setCode($code);

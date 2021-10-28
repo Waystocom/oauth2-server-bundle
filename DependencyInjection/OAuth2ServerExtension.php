@@ -1,6 +1,6 @@
 <?php
 
-namespace OAuth2\ServerBundle\DependencyInjection;
+namespace OAuth2ServerBundle\DependencyInjection;
 
 use Exception;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

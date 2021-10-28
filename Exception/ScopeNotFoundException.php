@@ -1,6 +1,6 @@
 <?php
 
-namespace OAuth2\ServerBundle\Exception;
+namespace OAuth2ServerBundle\Exception;
 
 use Exception;
 

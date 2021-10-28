@@ -1,8 +1,8 @@
 <?php
 
-namespace OAuth2\ServerBundle\Manager;
+namespace OAuth2ServerBundle\Manager;
 
-use OAuth2\ServerBundle\Entity\Scope;
+use OAuth2ServerBundle\Entity\Scope;
 
 /**
  * Interface ScopeManagerInterface

@@ -1,9 +1,9 @@
 <?php
 
-namespace OAuth2\ServerBundle\Command;
+namespace OAuth2ServerBundle\Command;
 
 use Exception;
-use OAuth2\ServerBundle\User\OAuth2UserProvider;
+use OAuth2ServerBundle\User\OAuth2UserProvider;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;

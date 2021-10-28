@@ -1,4 +1,4 @@
-OAuth2\ServerBundle\Entity\Client:
+OAuth2ServerBundle\Entity\Client:
     type: entity
     table: oauth_client
     id:

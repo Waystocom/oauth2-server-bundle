@@ -1,6 +1,6 @@
 <?php
 
-namespace OAuth2\ServerBundle\Storage;
+namespace OAuth2ServerBundle\Storage;
 
 use Doctrine\ORM\ORMException;
 use Exception;
@@ -100,7 +100,7 @@ class AuthorizationCode implements AuthorizationCodeInterface
             throw new Exception('Unknown client identifier');
         }
 
-        $authorizationCode = new \OAuth2\ServerBundle\Entity\AuthorizationCode();
+        $authorizationCode = new \OAuth2ServerBundle\Entity\AuthorizationCode();
         $authorizationCode->setCode($code);
         $authorizationCode->setClient($client);
         $authorizationCode->setUserId($userId);

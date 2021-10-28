@@ -1,11 +1,11 @@
 <?php
 
-namespace OAuth2\ServerBundle\Tests\Entity;
+namespace OAuth2ServerBundle\Tests\Entity;
 
 use Exception;
-use OAuth2\ServerBundle\Tests\ContainerLoader;
-use OAuth2\ServerBundle\Entity\ClientPublicKey;
-use OAuth2\ServerBundle\Entity\Client;
+use OAuth2ServerBundle\Tests\ContainerLoader;
+use OAuth2ServerBundle\Entity\ClientPublicKey;
+use OAuth2ServerBundle\Entity\Client;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -47,7 +47,7 @@ class ClientPublicKeyTest extends TestCase
 
             // test direct access
             $stored = $emn->find(
-                'OAuth2\ServerBundle\Entity\ClientPublicKey',
+                'OAuth2ServerBundle\Entity\ClientPublicKey',
                 array('clientId' => $client)
             );
 

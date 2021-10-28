@@ -1,11 +1,11 @@
 <?php
 
-namespace OAuth2\ServerBundle\Tests\Controller;
+namespace OAuth2ServerBundle\Tests\Controller;
 
 use OAuth2\HttpFoundationBridge\Request;
-use OAuth2\ServerBundle\Manager\ClientManager;
-use OAuth2\ServerBundle\Tests\ContainerLoader;
-use OAuth2\ServerBundle\Controller\AuthorizeController;
+use OAuth2ServerBundle\Manager\ClientManager;
+use OAuth2ServerBundle\Tests\ContainerLoader;
+use OAuth2ServerBundle\Controller\AuthorizeController;
 use PHPUnit\Framework\TestCase;
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;

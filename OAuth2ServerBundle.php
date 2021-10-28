@@ -1,6 +1,6 @@
 <?php
 
-namespace OAuth2\ServerBundle;
+namespace OAuth2ServerBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

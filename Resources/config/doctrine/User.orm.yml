@@ -1,4 +1,4 @@
-OAuth2\ServerBundle\Entity\User:
+OAuth2ServerBundle\Entity\User:
     type: entity
     table: oauth_user
     id:

@@ -1,10 +1,10 @@
 <?php
 
-namespace OAuth2\ServerBundle\Tests\Entity;
+namespace OAuth2ServerBundle\Tests\Entity;
 
 use Exception;
-use OAuth2\ServerBundle\Tests\ContainerLoader;
-use OAuth2\ServerBundle\Entity\Scope;
+use OAuth2ServerBundle\Tests\ContainerLoader;
+use OAuth2ServerBundle\Entity\Scope;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -31,7 +31,7 @@ class ScopeTest extends TestCase
             $emn->persist($scope);
             $emn->flush();
 
-            $stored = $emn->find('OAuth2\ServerBundle\Entity\Scope', array('scope' => $name));
+            $stored = $emn->find('OAuth2ServerBundle\Entity\Scope', array('scope' => $name));
 
             $this->assertNotNull($stored);
             $this->assertEquals($name, $stored->getScope());

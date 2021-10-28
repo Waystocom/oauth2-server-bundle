@@ -1,13 +1,13 @@
 <?php
 
-namespace OAuth2\ServerBundle\Tests\Command;
+namespace OAuth2ServerBundle\Tests\Command;
 
 use Exception;
-use OAuth2\ServerBundle\Manager\ScopeManager;
-use OAuth2\ServerBundle\Storage\ClientCredentials;
-use OAuth2\ServerBundle\Storage\Scope;
-use OAuth2\ServerBundle\Tests\ContainerLoader;
-use OAuth2\ServerBundle\Command\CreateClientCommand;
+use OAuth2ServerBundle\Manager\ScopeManager;
+use OAuth2ServerBundle\Storage\ClientCredentials;
+use OAuth2ServerBundle\Storage\Scope;
+use OAuth2ServerBundle\Tests\ContainerLoader;
+use OAuth2ServerBundle\Command\CreateClientCommand;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Console\Input\ArgvInput;
 use Symfony\Component\Console\Output\BufferedOutput;

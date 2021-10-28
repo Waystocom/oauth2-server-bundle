@@ -1,10 +1,10 @@
 <?php
 
-namespace OAuth2\ServerBundle\Tests\Entity;
+namespace OAuth2ServerBundle\Tests\Entity;
 
 use Exception;
-use OAuth2\ServerBundle\Tests\ContainerLoader;
-use OAuth2\ServerBundle\Entity\RefreshToken;
+use OAuth2ServerBundle\Tests\ContainerLoader;
+use OAuth2ServerBundle\Entity\RefreshToken;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -31,7 +31,7 @@ class RefreshTokenTest extends TestCase
             $emn->persist($refreshToken);
             $emn->flush();
 
-            $stored = $emn->find('OAuth2\ServerBundle\Entity\RefreshToken', array('token' => $token));
+            $stored = $emn->find('OAuth2ServerBundle\Entity\RefreshToken', array('token' => $token));
 
             $this->assertNotNull($stored);
             $this->assertEquals($token, $stored->getToken());

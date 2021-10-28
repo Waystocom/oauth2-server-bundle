@@ -1,12 +1,12 @@
 <?php
 
-namespace OAuth2\ServerBundle\Manager;
+namespace OAuth2ServerBundle\Manager;
 
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\OptimisticLockException;
 use Doctrine\ORM\ORMException;
-use OAuth2\ServerBundle\Entity\Client;
-use OAuth2\ServerBundle\Exception\ScopeNotFoundException;
+use OAuth2ServerBundle\Entity\Client;
+use OAuth2ServerBundle\Exception\ScopeNotFoundException;
 
 /**
  * Class ClientManager

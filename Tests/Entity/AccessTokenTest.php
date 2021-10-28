@@ -1,11 +1,11 @@
 <?php
 
-namespace OAuth2\ServerBundle\Tests\Entity;
+namespace OAuth2ServerBundle\Tests\Entity;
 
 use DateTime;
 use Exception;
-use OAuth2\ServerBundle\Tests\ContainerLoader;
-use OAuth2\ServerBundle\Entity\AccessToken;
+use OAuth2ServerBundle\Tests\ContainerLoader;
+use OAuth2ServerBundle\Entity\AccessToken;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -31,7 +31,7 @@ class AccessTokenTest extends TestCase
             $emn->persist($accessToken);
             $emn->flush();
 
-            $stored = $emn->find('OAuth2\ServerBundle\Entity\AccessToken', array('token' => $token));
+            $stored = $emn->find('OAuth2ServerBundle\Entity\AccessToken', array('token' => $token));
 
             $this->assertNotNull($stored);
             $this->assertEquals($token, $stored->getToken());

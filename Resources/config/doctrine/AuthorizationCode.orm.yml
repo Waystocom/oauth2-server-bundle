@@ -1,4 +1,4 @@
-OAuth2\ServerBundle\Entity\AuthorizationCode:
+OAuth2ServerBundle\Entity\AuthorizationCode:
     type: entity
     table: oauth_authorization_code
     id:
@@ -30,7 +30,7 @@ OAuth2\ServerBundle\Entity\AuthorizationCode:
             column:     id_token
     manyToOne:
       client:
-        targetEntity: OAuth2\ServerBundle\Entity\Client
+        targetEntity: OAuth2ServerBundle\Entity\Client
         joinColumn:
           name: client_id
           referencedColumnName: client_id

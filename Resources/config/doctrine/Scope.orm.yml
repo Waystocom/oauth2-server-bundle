@@ -1,4 +1,4 @@
-OAuth2\ServerBundle\Entity\Scope:
+OAuth2ServerBundle\Entity\Scope:
     type: entity
     table: oauth_scope
     id:

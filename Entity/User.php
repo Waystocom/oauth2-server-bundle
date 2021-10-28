@@ -1,8 +1,8 @@
 <?php
 
-namespace OAuth2\ServerBundle\Entity;
+namespace OAuth2ServerBundle\Entity;
 
-use OAuth2\ServerBundle\User\OAuth2UserInterface;
+use OAuth2ServerBundle\User\OAuth2UserInterface;
 
 /**
  * User

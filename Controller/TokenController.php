@@ -1,6 +1,6 @@
 <?php
 
-namespace OAuth2\ServerBundle\Controller;
+namespace OAuth2ServerBundle\Controller;
 
 use OAuth2\GrantType\AuthorizationCode;
 use OAuth2\GrantType\ClientCredentials;
