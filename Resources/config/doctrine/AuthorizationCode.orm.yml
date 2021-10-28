@@ -1,0 +1,39 @@
+OAuth2\ServerBundle\Entity\AuthorizationCode:
+    type: entity
+    table: oauth_authorization_code
+    id:
+        code:
+            type:       string
+            length:     40
+            column:     code
+    fields:
+        expires:
+            type:       datetime
+            column:     expires
+        userId:
+            type:       string
+            length:     100
+            nullable:   true
+            column:     user_id
+        redirectUri:
+            type:       simple_array
+            column:     redirect_uri
+        scope:
+            type:       string
+            length:     255
+            nullable:   true
+            column:     scope
+        idToken:
+            type:       string
+            length:     2000
+            nullable:   true
+            column:     id_token
+    manyToOne:
+      client:
+        targetEntity: OAuth2\ServerBundle\Entity\Client
+        joinColumn:
+          name: client_id
+          referencedColumnName: client_id
+          onDelete: CASCADE
+          onUpdate: CASCADE
+    lifecycleCallbacks: {  }

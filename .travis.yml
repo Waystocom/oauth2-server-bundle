@@ -1,0 +1,19 @@
+language: php
+os:
+  - linux
+dist: bionic
+php:
+  - 7.4
+services:
+  - mysql
+env:
+  - CONTAINER_CONFIG=Tests/Resources/config/services.xml
+before_script:
+  - composer install
+  - cp phpunit.xml.dist phpunit.xml
+  - ln -s Tests/cli-config.php cli-config.php
+  - mysql -e 'create database oauth2_server_bundle;'
+  - php vendor/doctrine/orm/bin/doctrine orm:schema-tool:update --force
+
+script:
+  - ./vendor/phpunit/phpunit/phpunit

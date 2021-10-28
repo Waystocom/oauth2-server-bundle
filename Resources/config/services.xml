@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <parameters>
+        <parameter key="oauth2.server.config" type="collection" />
+    </parameters>
+    <services>
+        <service id="OAuth2\ServerBundle\Command\CreateClientCommand">
+            <argument type="service" id="OAuth2\ServerBundle\Manager\ClientManager"/>
+            <tag name="console.command"/>
+        </service>
+        <service id="OAuth2\ServerBundle\Command\CreateUserCommand">
+            <argument type="service" id="OAuth2\ServerBundle\User\OAuth2UserProvider"/>
+            <tag name="console.command"/>
+        </service>
+        <service id="OAuth2\ServerBundle\Command\CreateScopeCommand">
+            <argument type="service" id="OAuth2\ServerBundle\Manager\ScopeManager"/>
+            <tag name="console.command"/>
+        </service>
+        <service id="OAuth2\ServerBundle\Controller\TokenController">
+            <argument type="service" id="OAuth2\Server"/>
+            <argument type="service" id="OAuth2\GrantType\AuthorizationCode"/>
+            <argument type="service" id="OAuth2\GrantType\RefreshToken"/>
+            <argument type="service" id="OAuth2\GrantType\UserCredentials"/>
+            <argument type="service" id="OAuth2\GrantType\ClientCredentials"/>
+            <argument type="service" id="OAuth2\HttpFoundationBridge\Request"/>
+            <argument type="service" id="OAuth2\HttpFoundationBridge\Response"/>
+        </service>
+        <service id="OAuth2\ServerBundle\Controller\VerifyController" >
+            <argument type="service" id="OAuth2\Server"/>
+            <argument type="service" id="OAuth2\HttpFoundationBridge\Request"/>
+            <argument type="service" id="OAuth2\HttpFoundationBridge\Response"/>
+        </service>
+        <service id="OAuth2\ServerBundle\Controller\AuthorizeController" >
+            <argument type="service" id="OAuth2\Server"/>
+            <argument type="service" id="OAuth2\HttpFoundationBridge\Request"/>
+            <argument type="service" id="OAuth2\HttpFoundationBridge\Response"/>
+            <argument type="service" id="OAuth2\ServerBundle\Storage\Scope"/>
+        </service>
+        <service id="OAuth2\Server">
+            <argument type="collection">
+                <argument key="client_credentials" type="service" id="OAuth2\ServerBundle\Storage\ClientCredentials" />
+                <argument key="access_token" type="service" id="OAuth2\ServerBundle\Storage\AccessToken" />
+                <argument key="authorization_code" type="service" id="OAuth2\ServerBundle\Storage\AuthorizationCode" />
+                <argument key="user_credentials" type="service" id="OAuth2\ServerBundle\Storage\UserCredentials" />
+                <argument key="refresh_token" type="service" id="OAuth2\ServerBundle\Storage\RefreshToken" />
+                <argument key="scope" type="service" id="OAuth2\ServerBundle\Storage\Scope" />
+                <argument key="public_key" type="service" id="OAuth2\Storage\Memory" />
+                <argument key="user_claims" type="service" id="OAuth2\Storage\Memory" />
+            </argument>
+            <argument>%oauth2.server.config%</argument>
+        </service>
+        <service id="OAuth2\HttpFoundationBridge\Request">
+            <factory class="OAuth2\HttpFoundationBridge\Request" method="createFromRequestStack" />
+            <argument type="service" id="request_stack"/>
+        </service>
+        <service id="OAuth2\HttpFoundationBridge\Response"/>
+        <service id="OAuth2\ServerBundle\User\OAuth2UserProvider">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+            <argument type="service" id="security.encoder_factory"/>
+        </service>
+        <service id="OAuth2\ServerBundle\Manager\ScopeManager">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+        </service>
+        <service id="OAuth2\ServerBundle\Storage\ClientCredentials">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+        </service>
+        <service id="OAuth2\ServerBundle\Storage\AuthorizationCode">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+        </service>
+        <service id="OAuth2\ServerBundle\Storage\UserCredentials">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+            <argument type="service" id="OAuth2\ServerBundle\User\OAuth2UserProvider"/>
+            <argument type="service" id="security.encoder_factory"/>
+        </service>
+        <service id="OAuth2\ServerBundle\Storage\AccessToken">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+        </service>
+        <service id="OAuth2\ServerBundle\Storage\RefreshToken">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+        </service>
+        <service id="OAuth2\ServerBundle\Storage\Scope">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+            <argument type="service" id="OAuth2\ServerBundle\Manager\ScopeManager"/>
+        </service>
+        <service id="OAuth2\Storage\Memory" />
+        <service id="OAuth2\GrantType\ClientCredentials">
+            <argument type="service" id="OAuth2\ServerBundle\Storage\ClientCredentials"/>
+        </service>
+        <service id="OAuth2\GrantType\AuthorizationCode">
+            <argument type="service" id="OAuth2\ServerBundle\Storage\AuthorizationCode"/>
+        </service>
+        <service id="OAuth2\GrantType\UserCredentials">
+            <argument type="service" id="OAuth2\ServerBundle\Storage\UserCredentials"/>
+        </service>
+        <service id="OAuth2\GrantType\RefreshToken">
+            <argument type="service" id="OAuth2\ServerBundle\Storage\RefreshToken"/>
+            <argument type="collection">
+                <argument key="always_issue_new_refresh_token">false</argument>
+            </argument>
+        </service>
+        <service id="OAuth2\ServerBundle\Manager\ClientManager">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+            <argument type="service" id="OAuth2\ServerBundle\Manager\ScopeManager"/>
+        </service>
+    </services>
+</container>
