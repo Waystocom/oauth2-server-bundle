@@ -30,6 +30,5 @@
     },
     "autoload": {
         "psr-4": { "OAuth2\\ServerBundle": "" }
-    },
-    "target-dir": "OAuth2/ServerBundle"
+    }
 }
