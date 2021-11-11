@@ -1,6 +1,6 @@
 OAuth2ServerBundle\Entity\AuthorizationCode:
     type: entity
-    table: oauth_authorization_code
+    table: oauth__authorization_code
     id:
         code:
             type:       string

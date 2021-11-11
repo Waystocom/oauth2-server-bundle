@@ -1,6 +1,6 @@
 OAuth2ServerBundle\Entity\ClientPublicKey:
     type: entity
-    table: oauth_client_public_key
+    table: oauth__client_public_key
     id:
         clientId:
             type:       string

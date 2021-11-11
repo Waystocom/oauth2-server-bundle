@@ -1,6 +1,6 @@
 OAuth2ServerBundle\Entity\Scope:
     type: entity
-    table: oauth_scope
+    table: oauth__scope
     id:
         scope:
             type:       string

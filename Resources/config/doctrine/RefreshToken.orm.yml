@@ -1,6 +1,6 @@
 OAuth2ServerBundle\Entity\RefreshToken:
     type: entity
-    table: oauth_refresh_token
+    table: oauth__refresh_token
     id:
         token:
             type:       string

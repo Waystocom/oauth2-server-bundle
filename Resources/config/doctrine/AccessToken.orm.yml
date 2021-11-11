@@ -1,6 +1,6 @@
 OAuth2ServerBundle\Entity\AccessToken:
     type: entity
-    table: oauth_access_token
+    table: oauth__access_token
     id:
         token:
             type:       string

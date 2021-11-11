@@ -1,6 +1,6 @@
 OAuth2ServerBundle\Entity\Client:
     type: entity
-    table: oauth_client
+    table: oauth__client
     id:
         clientId:
             type:       string
